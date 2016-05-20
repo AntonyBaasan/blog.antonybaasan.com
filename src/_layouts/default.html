@@ -5,20 +5,32 @@
 
   <body>
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <!--{% include header.html %}-->
+    <!--<div class="wrapper">-->
+      <div class="col-sm-3 sidebar hidden-xs"
+           style="{% if site.sidebar_background_image %}background: url({{site.sidebar_background_image}}) no-repeat center center !important;{% endif %}">
+        {% include header.html %}
       </div>
-    </div>
 
-    {% include footer.html %}
 
-  <!-- JS -->
-  <!-- inject:js -->
-  <script src="/assets/javascript/index.js"></script>
-  <!-- endinject -->
+      <!--<div class="col-sm-9 col-sm-offset-3">-->
+      <div class="col-sm-9">
+        <!--<div class="page-content">-->
+          {{ content }}
+        <!--</div>-->
+      </div>
+    <!--</div>-->
+
+    <!--{% include footer.html %}-->
+
+    <!-- JS -->
+    <!-- inject:js -->
+    <script src="/assets/javascript/index.js"></script>
+    <!-- endinject -->
+
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   </body>
 

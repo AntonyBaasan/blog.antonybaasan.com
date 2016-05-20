@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div class="title"><a href="{{ site.baseurl }}/">{{ site.title }}</div>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -13,6 +13,12 @@
         </svg>
       </a>
 
+      {% if site.author.bio %}
+      <div id="bio" class="text-center">
+        {{ site.author.bio }}
+      </div>
+      {% endif %}
+
       <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title != "404: Page not found" %}
@@ -20,7 +26,38 @@
           {% endif %}
         {% endfor %}
       </div>
+
+      <div id="" class="text-center">
+        <ul class="list-unstyled list-inline">
+          {% if site.author.github %}
+          <li>
+            <a class="btn btn-default btn-sm" href="https://github.com/{{ site.author.github }}">
+              <i class="fa fa-github-alt fa-lg"></i>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.author.linkedin %}
+          <li>
+            <a class="btn btn-default btn-sm" href="https://linkedin.com/in/{{ site.author.linkedin }}">
+              <i class="fa fa-linkedin fa-lg"></i>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.author.email %}
+          <li>
+            <a class="btn btn-default btn-sm" href="mailto:{{ site.author.email }}">
+              <i class="fa fa-envelope fa-lg"></i>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
     </nav>
+
+
+
+
 
   </div>
 

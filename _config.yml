@@ -2,7 +2,7 @@
 # Can be used in your theme by calling 'site.title' and so on
 title: Antony&#39;s blog
 description: Antony&#39;b blog
-url: http://blog.antonybaasan.com
+url: http://blog.antonybaasan.com/blob.antonybaasan.com
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: src
@@ -17,7 +17,7 @@ author:
   email: antony.baasan@gmail.com
   uri: http://blog.antonybaasan.com
   bio: Software Developer
-  twitter: 
+  twitter:
   github: antonybaasan
 
 # _config.build.yml overwrites these options when you run `gulp build`
